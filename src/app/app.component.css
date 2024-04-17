@@ -1,3 +1,13 @@
-.customClass:not(.active) {
-  background-color: #50ff50;
+.nav-item .active {
+  color: white;
+  background-color: #098b09 !important;
+}
+
+.custom-tab-heading {
+  background-color: hsl(138, 91%, 22%); /* Cor vermelha para o texto do heading */
+}
+
+.routerActive {
+  color:white;
+  background-color: #b60f55 !important;
 }

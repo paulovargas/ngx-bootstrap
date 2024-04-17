@@ -1,8 +1,53 @@
-<router-outlet />
-<tabset>
+<!-- <router-outlet /> -->
+<!-- <tabset>
   <tab *ngFor="let tabz of tabs"
        [heading]="tabz.title"
-       [customClass]="tabz.customClass">
+       [customClass]="tabz.customClass"
+       >
     {{tabz?.content}}
   </tab>
-</tabset>
+</tabset> -->
+<div class="mx-5 my-2">
+  <tabset class="nav-pills" style="background-color: chartreuse !important;">
+    <tab heading="Home" routerLinkActive="routerActive">
+      <app-home></app-home>
+    </tab>
+    <tab heading="Contact" routerLinkActive="routerActive">
+      <app-contact></app-contact>
+    </tab>
+    <tab heading="About" routerLinkActive="routerActive">
+      <app-about></app-about>
+    </tab>
+    <router-outlet></router-outlet>
+  </tabset>
+</div>
+
+<div class="mx-5 my-2">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+</div>
+<ul class="nav nav-tabs">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+  </li>
+
+</ul>
+
